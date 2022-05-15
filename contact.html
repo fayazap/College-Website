@@ -67,13 +67,13 @@
                 </div>
             </div>
         </div>
-        <div class="contact-col">
+        <div class="contact-col" id="details">
             <form action="form-handler.php" method="post">
                 <input type="text" name="name" placeholder="Enter your name" required>
                 <input type="email" name="email" placeholder="Enter Email Id" required>
                 <input type="text" name="subject" placeholder="Enter your subject" required>
                 <textarea  rows="8" name="message" placeholder="Message" required></textarea>
-                <button type="submit" class="hero-btn red-btn">Send Message</button>
+                <button type="submit" class="hero-btn red-btn" onclick="myfun()">Send Message</button>
             </form>
         </div>
     </div>
@@ -107,6 +107,11 @@
         navLinks.style.right = "-150px";
     }
 
+    var contact_col = document.getElementById("details");
+
+    function myfun(event) {
+       event.preventDefault();
+    }
 
 </script>
 
